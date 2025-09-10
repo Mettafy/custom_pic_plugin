@@ -1,0 +1,66 @@
+# custom_pic_plugin - 自动生成的配置文件
+# 基于魔搭（ModelScope）API的绘画插件，适配MaiBot v0.10.0新架构。
+
+# 插件基础信息
+[plugin]
+
+# 插件名称，无需修改
+name = "custom_pic_plugin"
+
+# 配置文件版本号
+config_version = "1.2.1"
+
+
+# 插件控制
+[plugin_control]
+
+# True: 启用此插件, False: 禁用此插件
+enable = true
+
+
+# 魔搭API配置
+[api]
+
+# 魔搭API地址，通常无需修改。
+base_url = "https://api-inference.modelscope.cn"
+
+# 请直接填入你的魔搭API令牌（ms-开头的字符串），无需添加`Bearer`前缀。 (必需)
+api_key = "ms-6d5c2834-6742-411f-a1ee-a64535c8716d"
+
+
+# 图片生成参数配置
+[generation]
+
+# 默认使用的模型ID。
+default_model = "lelexiong1025/realmixpony_v1"
+
+# 默认的图片尺寸。
+# 可选值: 512x512, 1024x1024, 1024x1280, 1280x1024, 1024x1536, 1536x1024
+default_size = "1024x1024"
+
+# 模型指导强度，影响图片与提示的关联性。API限制范围: [1.5, 20.0]。
+default_guidance = 4
+
+# 随机种子，用于复现图片。设置为 -1 可在每次生成时使用随机种子。
+default_seed = -1
+
+# 采样步数，影响图片细节和生成速度。API限制范围: [1, 100]。
+default_steps = 40
+
+# 正面附加提示词。该参数不参与 LLM 模型转换，属于直接发送的参数，使用英文，使用词语和逗号的形式。⚠️警告：请勿设置过长的提示词，用户输入+此配置的总长度不得超过2000字符，超出将被自动截断。
+custom_prompt_add = ",Photorealistic, RAW photo in 8k UHD with ultra high detail. The subject is a person with detailed facial features, including natural skin texture, realistic skin pores, and subtle skin imperfections. The eyes are meticulously detailed, with clear irises and pupils, and the authentic human expression is captured with precision. The person is wearing baggy clothing, which is emphasized (baggy clothing:1.2), and the soft fabric folds are clearly visible, adding to the realism. The clothing has vibrant color accents that stand out against the warm, natural palette of the environment. The lighting is gentle and low-contrast, creating a soft, organic feel. The environment around the subject includes organic shapes and natural elements, enhancing the overall warmth and authenticity of the scene. The physically-based rendering ensures sharp focus and realistic environmental reflections in the eyes, capturing the surrounding details with accuracy."#8k超高清原始照片，具有超高细节。受试者是一个具有详细面部特征的人，包括自然皮肤纹理、逼真的皮肤毛孔和微妙的皮肤瑕疵。眼睛细致细致，虹膜和瞳孔清晰，准确捕捉到真实的人类表情。该人穿着宽松的衣服，这是强调（宽松的衣服：1.2），柔软的织物褶皱清晰可见，增加了真实感。这些服装具有鲜明的色彩，与温暖、自然的环境色调形成鲜明对比。灯光柔和，对比度低，营造出柔和、有机的感觉。主体周围的环境包括有机形状和自然元素，增强了场景的整体温暖和真实性。基于物理的渲染可确保眼睛中的清晰焦点和逼真的环境反射，准确捕捉周围的细节。"
+
+# 负面附加提示词，保持默认即可。⚠️警告：请勿设置过长，总长度不得超过2000字符，超出将被自动截断。
+negative_prompt_add = "(worst quality, low quality, normal quality:1.4), text, signature, watermark, username, artist name, (deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, (doll, mannequin, figurine:1.3), (drawing, painting, sketch, cartoon, anime, manga:1.5), cel-shaded, render, 3d, cgi, unreal engine, video game, plastic, airbrushed, oversaturated, overexposed, underexposed, (makeup, heavy makeup:1.2), photoshopped, filter, beautify, perfect skin, (studio backdrop, professional lighting setup:1.2)"# （质量最差、质量低、质量正常：1.4）、文本、签名、水印、用户名、艺术家姓名、（变形、扭曲、毁容：1.3）、绘制不佳、解剖结构不良、解剖结构错误、肢体外、缺失肢体、浮动肢体、断开肢体、突变、突变、丑陋、恶心、模糊、截肢、（玩偶、人体模型、小雕像：1.3），（绘画、素描、卡通、动漫、漫画：1.5）、cel着色、渲染、3d、cgi、虚幻引擎、视频游戏、塑料、喷绘、过饱和、过度曝光、曝光不足、（化妆、浓妆：1.2）、Photoshop、滤镜、美化、完美肌肤，（工作室背景，专业照明设置：1.2）"
+
+
+# 结果缓存配置
+[cache]
+
+# 是否启用请求缓存。
+enabled = true
+
+# 最大缓存数量。
+max_size = 10
+
+

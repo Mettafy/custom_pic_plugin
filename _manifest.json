@@ -1,0 +1,16 @@
+{
+  "manifest_version": 1,
+  "name": "custom_pic_plugin",
+  "version": "2.0.0",
+  "description": "基于魔搭（ModelScope）API的绘画插件，适配MaiBot v0.10.0新架构。",
+  "author": {
+    "name": "Ptrel & Roo"
+  },
+  "license": "MIT",
+  "keywords": ["draw", "image", "ai", "modelscope"],
+  "categories": ["Picture"],
+  "min_maibot_version": "0.10.0",
+  "dependencies": {
+    "python": ["aiohttp"]
+  }
+}

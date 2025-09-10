@@ -1,8 +1,8 @@
 # custom_pic_plugin
 
-一个基于魔搭（ModelScope）API 的 MaiBot 图片生成插件，已适配 MaiBot v0.10.0 新架构。
+- 魔改自该插件仓库：https://github.com/1021143806/custom_pic_plugin
 
-本插件允许用户通过自然语言描述，调用免费的魔搭文生图模型来创作高质量图片。
+
 
 ## 核心功能
 

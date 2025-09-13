@@ -25,7 +25,7 @@ enable = true
 base_url = "https://api-inference.modelscope.cn"
 
 # 请直接填入你的魔搭API令牌（ms-开头的字符串），无需添加`Bearer`前缀。 (必需)
-api_key = "ms-6d5c2834-6742-411f-a1ee-a64535c8716d"
+api_key = "xxxxx"
 
 
 # 图片生成参数配置
